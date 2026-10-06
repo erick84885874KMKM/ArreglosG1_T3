@@ -1,4 +1,4 @@
 <Solution>
-  <Project Path="../ArreglosG1_T3/Arreglos.UI.Consola/Arreglos.UI.Consola.csproj" />
+  <Project Path="../Arreglos.UI.Consola/Arreglos.UI.Consola.csproj" />
   <Project Path="Arreglos.Logica.csproj" />
 </Solution>
