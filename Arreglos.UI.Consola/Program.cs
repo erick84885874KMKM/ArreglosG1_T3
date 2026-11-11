@@ -34,25 +34,36 @@ internal class Program
             throw;
         }
 
-        MiArreglo oMyArreglo = new(100);
+        MiArreglo oMyArreglo = new(500);
         try
         {
             Console.WriteLine("\nArreglo\n");
-            oMyArreglo.Llenar();
+            oMyArreglo.Llenar(1, 999999);
             Console.WriteLine(oMyArreglo);
             Console.ReadKey();
 
-            Console.WriteLine("\nPares\n");
-            var verPares = oMyArreglo.ObtenerPares();
-            Console.WriteLine(verPares);
+            //Console.WriteLine("\nPares\n");
+            //var verPares = oMyArreglo.ObtenerPares();
+            //Console.WriteLine(verPares);
+            //Console.ReadKey();
+
+            //Console.WriteLine("\nPares ordenados\n");
+            //verPares.Ordenar();
+            //Console.WriteLine(verPares);
+            //Console.ReadKey();
+
+            Console.WriteLine("\nPrimos\n");
+            var verPrimos = oMyArreglo.ObtenerPrimos();
+            Console.WriteLine(verPrimos);
             Console.ReadKey();
 
-            Console.WriteLine("\nPares ordenados\n");
-            verPares.Ordenar();
-            Console.WriteLine(verPares);
+            Console.WriteLine("\nPrimos Ordenados\n");
+            verPrimos.Ordenar();
+            Console.WriteLine(verPrimos);
             Console.ReadKey();
+
         }
-        catch (Exception ex)
+        catch (Exception)
         {
             throw;
         }
@@ -69,7 +80,7 @@ internal class Program
         Console.WriteLine("Arreglo ordenado ascendente\n");
         oMiArreglo.Ordenar();
         Console.WriteLine(oMiArreglo);
-        
+
         Console.WriteLine("Arreglo ordenado descendente\n");
         oMiArreglo.Ordenar(false);
         Console.WriteLine(oMiArreglo);*/
