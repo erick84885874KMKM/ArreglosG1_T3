@@ -34,12 +34,20 @@ internal class Program
             throw;
         }
 
-        MiArreglo oMyArreglo = new(500);
+        MiArreglo oMyArreglo = new(500000);
         try
         {
             Console.WriteLine("\nArreglo\n");
+            var tiempo1 = DateTime.Now;
             oMyArreglo.Llenar(1, 999999);
-            Console.WriteLine(oMyArreglo);
+
+            //Console.WriteLine(oMyArreglo);
+            var tiempo2 = DateTime.Now;
+
+
+            var restaTiempo = tiempo2 - tiempo1;
+
+            Console.WriteLine($"\nTiempo transcurrido: {restaTiempo.Minutes} minutos, {restaTiempo.Seconds} segundos, {restaTiempo.Milliseconds} milisegundos, {restaTiempo.Nanoseconds} nanosegundos");
             Console.ReadKey();
 
             //Console.WriteLine("\nPares\n");
@@ -53,8 +61,13 @@ internal class Program
             //Console.ReadKey();
 
             Console.WriteLine("\nPrimos\n");
+            var tiempo3 = DateTime.Now;
             var verPrimos = oMyArreglo.ObtenerPrimos();
-            Console.WriteLine(verPrimos);
+            // Console.WriteLine(verPrimos);
+            var tiempo4 = DateTime.Now;
+            var restaTiempo2 = tiempo4 - tiempo3;
+
+            Console.WriteLine($"\nTiempo transcurrido: {restaTiempo.Minutes} minutos, {restaTiempo.Seconds} segundos, {restaTiempo.Milliseconds} milisegundos, {restaTiempo.Nanoseconds} nanosegundos");
             Console.ReadKey();
 
             Console.WriteLine("\nPrimos Ordenados\n");
